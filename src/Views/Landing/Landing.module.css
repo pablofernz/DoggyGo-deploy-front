@@ -5,8 +5,8 @@
   box-sizing: border-box;
   padding-bottom: 5vh;
   /* background-color: rgb(184, 212, 255);  */
-  background-image: url(https://images.unsplash.com/photo-1586071889747-83d19664625a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80);
-
+  background-image: url(https://plus.unsplash.com/premium_photo-1671496450438-6a9c90ab87a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80);
+scroll-behavior: smooth;
 }
 
 .nav {
@@ -216,7 +216,6 @@
 
 .sec2indicatiosnContainer div {
   background-color: white;
-  border-radius: 1dvb;
   width: calc(90% / 3);
   position: relative;
   display: flex;
@@ -237,12 +236,27 @@
   margin-top: 1rem;
 }
 
-.sec2_idication1,
-.sec2_idication2,
+.sec2_idication1 {
+  box-shadow: 0px 0px 11px -4px gray;
+  font-family: 'Varela Round', sans-serif;
+  height: 190px;
+  border-radius: 50px 5px 5px 50px;
+}
+
+.sec2_idication2 {
+  box-shadow: 0px 0px 11px -4px gray;
+  font-family: 'Varela Round', sans-serif;
+  height: 190px;
+  border-radius: 10px 10px 10px 10px;
+  transition: all 0.3s ease;
+}
+
+
 .sec2_idication3 {
   box-shadow: 0px 0px 11px -4px gray;
   font-family: 'Varela Round', sans-serif;
   height: 190px;
+  border-radius: 5px 50px 50px 5px;
 }
 
 .sec2_idication1 img {
@@ -313,9 +327,11 @@
 .sec3vwall {
   font-family: 'Varela Round', sans-serif;
   border-radius: 0.2em;
-  background-color: rgb(255, 252, 252);
   color: rgb(29, 29, 29);
   width: 210px;
+  border: 2px black;
+
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
 }
 

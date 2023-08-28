@@ -5,7 +5,7 @@
   
   /* Estilo del pulgar de la scrollbar */
 ::-webkit-scrollbar-thumb {
-    background-color:rgb(206, 157, 135); /* Color del pulgar */
+    background-color:rgb(135, 170, 206); /* Color del pulgar */
     border-radius: 30px; /* Borde redondeado del pulgar */
   }
   
