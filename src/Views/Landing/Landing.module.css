@@ -1,94 +1,112 @@
-.Landing{
-    width: 100vw;
-    height: 100vh;
-    overflow-y: scroll;
-    box-sizing: border-box;
-    padding-bottom: 5vh;
-}
-.nav{
-    height: 7vh;
-    position: sticky;
-    top: 0%;
-    background-color: rgba(230, 240, 255, 1);
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 100%;
-    justify-content: start;
-    z-index: 7;
+.Landing {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  padding-bottom: 5vh;
+  /* background-color: rgb(184, 212, 255);  */
+  background-image: url(https://images.unsplash.com/photo-1586071889747-83d19664625a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80);
+
 }
 
-.nav h1{
-    box-sizing: border-box;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 0.5rem;
-    text-align: end;
-    font-size: 1.9rem;
-    font-weight: 600;
+.nav {
+  height: 7vh;
+  position: sticky;
+  top: 0%;
+  background-color: rgba(230, 240, 255, 1);
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 100%;
+  justify-content: start;
+  z-index: 7;
+
 }
+
+.nav h1 {
+  box-sizing: border-box;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 0.5rem;
+  text-align: end;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
 .secbtns1 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    gap: 0.5rem;
-  }
-  .btnsnav{
-    height: 35px;
-    margin-left: 0.5em;
-    width: calc(40% / 4);
-    transform: scale(1);
-    padding-top: 0.3rem ;
-    padding-bottom: 0.3rem ;
-    border-radius: 0.5em;
-    font-weight: 500;
-    font-size: 17px;
-    /* transition: transform 300ms  cubic-bezier(0.58, -0.55, 0.265, 1.55); */
-    font-family: 'Varela Round', sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  gap: 0.5rem;
+}
 
-    transition: all 300ms ease;
-    
+.btnsnav {
+  height: 35px;
+  margin-left: 0.5em;
+  width: calc(40% / 4);
+  transform: scale(1);
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-radius: 0.5em;
+  font-weight: 500;
+  font-size: 17px;
+  /* transition: transform 300ms  cubic-bezier(0.58, -0.55, 0.265, 1.55); */
+  font-family: 'Varela Round', sans-serif;
 
-  }
-  .btnsnav:hover{
-    background-color: rgb(120, 147, 187);
-    color: rgb(255, 255, 255);
-    /* transform: scale(1.3); */
-  }
-  .btnsnav:active{
-    color: rgb(141, 138, 138);
-  }
-  /* .secbtns1:hover .btnsnav:not(:hover){
-    transform: scale(0.85);
-  } */
-  .sesionbtns{
-    margin-left: 3.7em;
-    display: flex;
-    gap: 1rem;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: 'Varela Round', sans-serif;
+  transition: all 300ms ease;
 
-  }
-  .Register{
-    color: rgb(255, 255, 255);
-    padding: 0.7dvb;
-    width: 100px;
-    border-radius: 0.7em;
-    background-color: rgb(0, 118, 168);
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    font-weight: 400;
-    font-family: 'Unbounded', sans-serif;
-    transition: all 0.3s ease;
-  }
+}
 
-  .Register:hover{
-    background-color: rgb(0, 70, 100);
-  }
-  /* .letter{
+.btnsnav:focus:after,
+.btnsnav:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.btnsnav:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #000000;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+.sesionbtns {
+  margin-left: 3.7em;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Varela Round', sans-serif;
+}
+
+
+.Register {
+  color: rgb(255, 255, 255);
+  padding: 0.7dvb;
+  width: 100px;
+  border-radius: 0.7em;
+  background-color: rgb(0, 118, 168);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  font-weight: 400;
+  font-family: 'Unbounded', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.Register:hover {
+  background-color: rgb(0, 70, 100);
+}
+
+/* .letter{
     display: flex;
     animation: lttFlt 8s cubic-bezier(0.45, 0.31, 0.59, 1.5) infinite both;
 }
@@ -102,57 +120,74 @@
   } */
 
 /* <---------------------------------SEC1--------------------------------------------> */
-  
 
-.sec1{
-    background-color: rgba(230, 240, 255, 1);
-    height: 70vh;
-    box-sizing: border-box;
-    padding-left: 20%;
-    padding-top: 10vh;
-    margin-bottom: 5vh;
-    background-image: url(https://cdn.dribbble.com/userupload/2844366/file/original-ec53ecb9b3d82ad8673f430e9218c15e.png);
-    background-blend-mode: darken;
-    background-position: top;
-    background-position-x: 200%;
-    background-repeat: no-repeat;
+
+.sec1 {
+  background-color: rgba(230, 240, 255, 1);
+  height: 70vh;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-left: 20%;
+  padding-top: 10vh;
+  margin-bottom: 5vh;
+  background-image: url(https://i.ibb.co/m5G5pCx/blue-dog2.png);
+  background-blend-mode: darken;
+  background-position: top;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  border-radius: 0px 0px 100px 100px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.sec1 span:nth-child(1){
+
+.sec1 span:nth-child(1) {
   color: rgba(104, 118, 144, 1);
+  font-family: 'Varela Round', sans-serif;
 }
-.sec1 h2:nth-child(2){
+
+.sec1 h2:nth-child(2) {
   color: rgba(0, 3, 54, 1);
   font-size: 7dvh;
   font-weight: 700;
   line-height: 1;
   padding-bottom: 10vh;
+  font-family: 'Unbounded', sans-serif;
 
 }
-.sec1 p:nth-child(3){
+
+.sec1 p:nth-child(3) {
   width: 40%;
   color: rgba(90, 100, 115, 1);
   margin-bottom: 3rem;
-} 
-.sec1 button:nth-child(4){
+  margin-top: -4%;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.sec1 button:nth-child(4) {
   color: white;
   padding: 1rem;
   border-radius: 0.7dvh;
   background-color: rgba(0, 3, 54, 1);
+  font-family: 'Varela Round', sans-serif;
 
 }
 
 /* <---------------------------------SEC2--------------------------------------------> */
 
-.sec2{
-  width: 100%;
+.sec2 {
+  left: 5%;
+  width: 90%;
   height: 65vh;
   box-sizing: border-box;
   padding-top: 5vh;
-  padding-bottom: 5vh;
+  margin-bottom: 5vh;
   position: relative;
+  background-color: rgba(230, 240, 255, 1);
+  border-radius: 200px 200px 200px 200px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
-.sec2txP{
+
+.sec2txP {
   display: block;
   text-align: center;
   font-size: 3rem;
@@ -160,23 +195,26 @@
   font-weight: 300;
   font-family: 'Unbounded', sans-serif;
 }
-.sec2txS{
+
+.sec2txS {
   display: block;
   text-align: center;
   font-family: 'Varela Round', sans-serif;
 }
-.sec2indicatiosnContainer{
+
+.sec2indicatiosnContainer {
   height: 50%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
   box-sizing: border-box;
-  padding-left: 20% ;
-  padding-right: 20% ;
+  padding-left: 20%;
+  padding-right: 20%;
   text-transform: capitalize;
   margin-top: 1rem;
 }
-.sec2indicatiosnContainer div{
+
+.sec2indicatiosnContainer div {
   background-color: white;
   border-radius: 1dvb;
   width: calc(90% / 3);
@@ -189,7 +227,8 @@
   padding-top: 5%;
   padding-bottom: 5%;
 }
-.sec2indicatiosnContainer div div{
+
+.sec2indicatiosnContainer div div {
   display: block;
   width: 100%;
   font-size: 1cqi;
@@ -200,28 +239,29 @@
 
 .sec2_idication1,
 .sec2_idication2,
-.sec2_idication3{
+.sec2_idication3 {
   box-shadow: 0px 0px 11px -4px gray;
   font-family: 'Varela Round', sans-serif;
   height: 190px;
 }
-.sec2_idication1 img{
-   position:absolute;
-   top: 2%;
+
+.sec2_idication1 img {
+  position: absolute;
+  top: 2%;
   height: 9em;
   mix-blend-mode: multiply;
-    
+
 }
 
-.sec2_idication2 img{
-  position:absolute;
+.sec2_idication2 img {
+  position: absolute;
   top: 10%;
   height: 8em;
   mix-blend-mode: multiply;
 }
 
-.sec2_idication3 img{
-  position:absolute;
+.sec2_idication3 img {
+  position: absolute;
   top: 5%;
   height: 10em;
   mix-blend-mode: multiply;
@@ -229,29 +269,33 @@
 
 /* <---------------------------------SEC3--------------------------------------------> */
 
-.sec3{
+.sec3 {
   width: 100%;
-  height:65vh ;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-transform: capitalize;
   box-sizing: border-box;
   padding-top: 10vh;
-  background-color:rgba(245, 250, 254, 1) ;
+  background-color: rgba(230, 240, 255, 1);
+  border-radius: 100px 100px 30px 30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-.sec3InfoC{
+.sec3InfoC {
   display: flex;
   flex-flow: column wrap;
   width: 75%;
   margin-bottom: 3vh;
 }
-.sec3InfoC div{
+
+.sec3InfoC div {
   display: flex;
   justify-content: space-between;
 }
-.sec3tll{
+
+.sec3tll {
   display: block;
   text-align: start;
   font-size: 2.5rem;
@@ -259,50 +303,50 @@
   font-weight: 400;
   font-family: 'Unbounded', sans-serif;
 }
-.sec3stx{
+
+.sec3stx {
   display: block;
   text-align: center;
   font-family: 'Varela Round', sans-serif;
 }
-.sec3vwall{
+
+.sec3vwall {
   font-family: 'Varela Round', sans-serif;
   border-radius: 0.2em;
-  background-color: rgb(237, 235, 235);
-  color: rgb(52, 52, 52);
+  background-color: rgb(255, 252, 252);
+  color: rgb(29, 29, 29);
   width: 210px;
+
 }
-.sec3PSContainer{
+
+.sec3PSContainer {
   width: 70%;
   height: 65%;
-   display: flex;
-   justify-content: space-evenly;
-   align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
 }
 
 /* pablo */
-.Logo{
-  margin-top: -0.3em;  
+.Logo {
+  margin-top: -0.3em;
   font-family: 'Unbounded', sans-serif;
   transform: scale(0.9);
+  cursor: default;
 }
 
-.Pasea{
-  font-family: 'Unbounded', sans-serif;
-  font-weight:3;
-}
 
-.welcome{
-  font-family: 'Varela Round', sans-serif;
-}
 
-.Textos{
-  margin-top: 45%;
+
+.Textos {
+  margin-top: 47%;
   background-color: transparent;
   font-size: 18px;
   color: rgb(39, 39, 39);
 }
 
-.howButtons{
+.howButtons {
   font-size: 15px;
   background-color: rgb(200, 200, 200);
   text-transform: uppercase;
@@ -311,11 +355,10 @@
   margin-top: 35px;
 }
 
-.img{
-position:absolute;
-transform: scale(0.08);
-margin-top: -162px ;
-margin-left: -107px;
-z-index: 1;
-
+.img {
+  position: absolute;
+  transform: scale(0.08);
+  margin-top: -162px;
+  margin-left: -107px;
+  z-index: 1;
 }

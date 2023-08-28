@@ -44,10 +44,14 @@ const Landing = () => {
   return (
     <div className={style.Landing}>
       <nav className={style.nav}>
-	  <img className={style.img} src="https://i.ibb.co/HzjDZKZ/DoggyGo.png" alt="DoggyGoLogo" />   
-		
+        <img
+          className={style.img}
+          src="https://i.ibb.co/HzjDZKZ/DoggyGo.png"
+          alt="DoggyGoLogo"
+        />
+
         <h1 className={style.Logo}> oggyGo</h1>
-		
+
         <div className={style.secbtns1}>
           <button className={style.btnsnav} onClick={() => navigate("/home")}>
             Home
@@ -58,7 +62,7 @@ const Landing = () => {
           <button className={style.btnsnav}>Contact</button>
         </div>
         <div className={style.sesionbtns}>
-          <button className={style.Sing} onClick={() => navigate("/login")}>
+          <button className={style.SignIn} onClick={() => navigate("/login")}>
             Sign in
           </button>
           <button
@@ -80,15 +84,15 @@ const Landing = () => {
         </div>
       </nav>
       <section className={style.sec1}>
-        <span className={style.welcome}>Bienvenido a Doggy</span>
-        <h2 className={style.Pasea}>Pasea a tu perro</h2>
+        <span >Bienvenido a Doggy</span>
+        <h2>Pasea a tu perro</h2>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ex,
-          omnis ea blanditiis odit incidunt architecto numquam magni veritatis
-          aliquam, sed ut accusantium illo unde cupiditate itaque harum adipisci
-          quidem?
+          Imagina perros ansiosos por pasear, pero sin nadie que los lleve
+          afuera. Sueñan con paseos y aventuras. Aquí entran los paseadores,
+          convirtiendo sueños en realidad y siendo recompensados con ladridos
+          alegres.
         </p>
-        <button>More about us</button>
+        <button >More about us</button>
       </section>
       <section className={style.sec2}>
         <p className={style.sec2txP}>¿Cómo funciona?</p>
