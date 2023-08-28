@@ -358,21 +358,13 @@
 }
 
 /* pablo */
-.Logo {
-  margin-top: -0.3em;
-  font-family: 'Unbounded', sans-serif;
-  transform: scale(0.9);
-  cursor: default;
-}
-
-
-
 
 .Textos {
   margin-top: 47%;
   background-color: transparent;
   font-size: 18px;
   color: rgb(39, 39, 39);
+ 
 }
 
 .howButtons {
@@ -384,10 +376,10 @@
   margin-top: 35px;
 }
 
-.img {
-  position: absolute;
-  transform: scale(0.08);
-  margin-top: -162px;
-  margin-left: -107px;
-  z-index: 1;
+
+.img2{
+  transform: scale(0.65);
+  margin-top: -2.7em;
+  margin-left: 0.9em;
+  opacity: 410%;
 }

@@ -44,13 +44,13 @@ const Landing = () => {
   return (
     <div className={style.Landing}>
       <nav className={style.nav}>
+        
         <img
-          className={style.img}
-          src="https://i.ibb.co/HzjDZKZ/DoggyGo.png"
+          className={style.img2}
+          src="https://i.ibb.co/4N35PX9/Doggy-Go-logo3.png"
           alt="DoggyGoLogo"
         />
-
-        <h1 className={style.Logo}> oggyGo</h1>
+        {/* <h1 className={style.Logo}> oggyGo</h1> */}
 
         <div className={style.secbtns1}>
           <button className={style.btnsnav} onClick={() => navigate("/home")}>
@@ -84,7 +84,7 @@ const Landing = () => {
         </div>
       </nav>
       <section className={style.sec1}>
-        <span >Bienvenido a Doggy</span>
+        <span>Bienvenido a Doggy</span>
         <h2>Pasea a tu perro</h2>
         <p>
           Imagina perros ansiosos por pasear, pero sin nadie que los lleve
@@ -92,7 +92,7 @@ const Landing = () => {
           convirtiendo sueños en realidad y siendo recompensados con ladridos
           alegres.
         </p>
-        <button >More about us</button>
+        <button>More about us</button>
       </section>
       <section className={style.sec2}>
         <p className={style.sec2txP}>¿Cómo funciona?</p>
