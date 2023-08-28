@@ -35,44 +35,60 @@
     gap: 0.5rem;
   }
   .btnsnav{
-    width: calc(35% / 5);
+    height: 35px;
+    margin-left: 0.5em;
+    width: calc(40% / 4);
     transform: scale(1);
     padding-top: 0.3rem ;
     padding-bottom: 0.3rem ;
     border-radius: 0.5em;
     font-weight: 500;
-    transition: transform 300ms  cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    background: rgba( 255, 255, 255, 0.25 );
-    backdrop-filter: blur( 4px );
+    font-size: 17px;
+    /* transition: transform 300ms  cubic-bezier(0.58, -0.55, 0.265, 1.55); */
+    font-family: 'Varela Round', sans-serif;
+
+    transition: all 300ms ease;
+    
 
   }
   .btnsnav:hover{
-    background-color: rgb(169, 191, 225);
-    color: white;
-    transform: scale(1.3);
+    background-color: rgb(120, 147, 187);
+    color: rgb(255, 255, 255);
+    /* transform: scale(1.3); */
   }
   .btnsnav:active{
     color: rgb(141, 138, 138);
   }
-  .secbtns1:hover .btnsnav:not(:hover){
+  /* .secbtns1:hover .btnsnav:not(:hover){
     transform: scale(0.85);
-  }
+  } */
   .sesionbtns{
+    margin-left: 3.7em;
     display: flex;
     gap: 1rem;
     justify-content: flex-start;
     align-items: center;
+    font-family: 'Varela Round', sans-serif;
+
   }
   .Register{
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 0.7dvb;
+    width: 100px;
     border-radius: 0.7em;
-    background-color: rgba(15, 27, 76, 1);
+    background-color: rgb(0, 118, 168);
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    font-weight: 400;
+    font-family: 'Unbounded', sans-serif;
+    transition: all 0.3s ease;
   }
-  .letter{
+
+  .Register:hover{
+    background-color: rgb(0, 70, 100);
+  }
+  /* .letter{
     display: flex;
     animation: lttFlt 8s cubic-bezier(0.45, 0.31, 0.59, 1.5) infinite both;
 }
@@ -83,7 +99,7 @@
     7%{
         transform: translateY(0%);
     }
-  }
+  } */
 
 /* <---------------------------------SEC1--------------------------------------------> */
   
@@ -139,13 +155,15 @@
 .sec2txP{
   display: block;
   text-align: center;
-  font-size: 3.2rem;
+  font-size: 3rem;
   color: rgba(0, 3, 54, 1);
-  font-weight: 500;
+  font-weight: 300;
+  font-family: 'Unbounded', sans-serif;
 }
 .sec2txS{
   display: block;
   text-align: center;
+  font-family: 'Varela Round', sans-serif;
 }
 .sec2indicatiosnContainer{
   height: 50%;
@@ -184,11 +202,29 @@
 .sec2_idication2,
 .sec2_idication3{
   box-shadow: 0px 0px 11px -4px gray;
+  font-family: 'Varela Round', sans-serif;
+  height: 190px;
 }
-.sec2_idication1 img,
-.sec2_idication2 img,
+.sec2_idication1 img{
+   position:absolute;
+   top: 2%;
+  height: 9em;
+  mix-blend-mode: multiply;
+    
+}
+
+.sec2_idication2 img{
+  position:absolute;
+  top: 10%;
+  height: 8em;
+  mix-blend-mode: multiply;
+}
+
 .sec2_idication3 img{
-  height:45% ;
+  position:absolute;
+  top: 5%;
+  height: 10em;
+  mix-blend-mode: multiply;
 }
 
 /* <---------------------------------SEC3--------------------------------------------> */
@@ -218,15 +254,22 @@
 .sec3tll{
   display: block;
   text-align: start;
-  font-size: 3.2rem;
+  font-size: 2.5rem;
   color: rgba(0, 3, 54, 1);
-  font-weight: 500;
+  font-weight: 400;
+  font-family: 'Unbounded', sans-serif;
 }
 .sec3stx{
   display: block;
   text-align: center;
+  font-family: 'Varela Round', sans-serif;
 }
 .sec3vwall{
+  font-family: 'Varela Round', sans-serif;
+  border-radius: 0.2em;
+  background-color: rgb(237, 235, 235);
+  color: rgb(52, 52, 52);
+  width: 210px;
 }
 .sec3PSContainer{
   width: 70%;
@@ -234,4 +277,45 @@
    display: flex;
    justify-content: space-evenly;
    align-items: center;
+}
+
+/* pablo */
+.Logo{
+  margin-top: -0.3em;  
+  font-family: 'Unbounded', sans-serif;
+  transform: scale(0.9);
+}
+
+.Pasea{
+  font-family: 'Unbounded', sans-serif;
+  font-weight:3;
+}
+
+.welcome{
+  font-family: 'Varela Round', sans-serif;
+}
+
+.Textos{
+  margin-top: 45%;
+  background-color: transparent;
+  font-size: 18px;
+  color: rgb(39, 39, 39);
+}
+
+.howButtons{
+  font-size: 15px;
+  background-color: rgb(200, 200, 200);
+  text-transform: uppercase;
+  width: 125px;
+  border-radius: 0.6em;
+  margin-top: 35px;
+}
+
+.img{
+position:absolute;
+transform: scale(0.08);
+margin-top: -162px ;
+margin-left: -107px;
+z-index: 1;
+
 }
