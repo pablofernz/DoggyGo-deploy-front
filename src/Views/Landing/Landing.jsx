@@ -1,11 +1,23 @@
 import style from './Landing.module.css';
 import Paseadores from '../../Components/Paseadores/Paseadores';
 import { useNavigate } from 'react-router-dom';
+import Nav from '../Nav';
+import Footer from '../../Components/Footer/Footer';
+//import Footer from '../Dashboard/components/Footer';
+
+
+/* borrar al sustituir por urls de cloudinary */
+import agenda from '/guia.png'
+import contacta from '/contacta.png'
+import renta from '/renta.png'
+import flecha from '/flecha.png'
+
+
 
 const Landing = () => {
 	const navigate = useNavigate();
-	// const dispatch = useDispatch();
 
+	//requerido de redux
 	const PaseadoresEstrella = [
 		{
 			img: 'https://picsum.photos/203',
@@ -30,42 +42,36 @@ const Landing = () => {
 		},
 	];
 
-	// useEffect(() => {
-	// 	try {
-	// 		dispatch(getAll());
-	// 	} catch (error) {
-	// 		console.log(error.message);
-	// 	}
-	// }, []);
+	const urlguia = agenda
+	const urlcontacta = contacta
+	const urlarenta = renta
+	const urlflecha = flecha
 
 	return (
 		<div className={style.Landing}>
-			<nav className={style.nav}>
+			<Nav />
+			{/* <nav className={style.nav}>
 				<h1>DoggyGo</h1>
 				<div className={style.secbtns1}>
 					<button
 						className={style.btnsnav}
 						onClick={() => navigate('/home')}
 					>
-						home
+						Inicio
 					</button>
-					<button className={style.btnsnav}>features</button>
-					<button className={style.btnsnav}>service</button>
-					<button className={style.btnsnav}>listed</button>
-					<button className={style.btnsnav}>contact</button>
+					<button className={style.btnsnav}>Caracteristicas</button>
+					<button className={style.btnsnav}>Servicios</button>
+					<button className={style.btnsnav}>Contactanos</button>
 				</div>
 				<div className={style.sesionbtns}>
-					<button
-						className={style.Sing}
-						onClick={() => navigate('/login')}
-					>
-						Sign in
+					<button className={style.Sing} onClick={() => navigate('/login')}>
+						Iniciar sesion
 					</button>
 					<button
 						className={style.Register}
 						onClick={() => navigate('/registro')}
 					>
-						{'Register'.split('').map((letter, index) => (
+						{'Registrate..!'.split('').map((letter, index) => (
 							<span
 								className={style.letter}
 								style={{
@@ -78,7 +84,7 @@ const Landing = () => {
 						))}
 					</button>
 				</div>
-			</nav>
+			</nav> */}
 			<section className={style.sec1}>
 				<span>Bienvenido a Doggy</span>
 				<h2>Pasea a tu perro</h2>
@@ -88,7 +94,7 @@ const Landing = () => {
 					numquam magni veritatis aliquam, sed ut accusantium illo
 					unde cupiditate itaque harum adipisci quidem?
 				</p>
-				<button>More about us</button>
+				<button>Mas sobre nosostros</button>
 			</section>
 			<section className={style.sec2}>
 				<p className={style.sec2txP}>¿como funciona?</p>
@@ -98,37 +104,37 @@ const Landing = () => {
 				<div className={style.sec2indicatiosnContainer}>
 					<div className={style.sec2_idication1}>
 						<img
-							src="https://img.freepik.com/vector-premium/imagen-dibujos-animados-hongo-palabra-hongo_587001-200.jpg?w=2000"
+							src={agenda}
 							alt=""
 						/>
 						<div>
 							<p>guia de paseadores</p>
-							<button>
-								how to buy <img src="" alt="" />
+							<button style={{marginTop:10, opacity:'50%'}}>
+								como agendar<img style={{display:'inline-block', height:'1rem'}} src={flecha} alt="" />
 							</button>
 						</div>
 					</div>
 					<div className={style.sec2_idication2}>
 						<img
-							src="https://img.freepik.com/vector-premium/imagen-dibujos-animados-hongo-palabra-hongo_587001-200.jpg?w=2000"
+							src={contacta}
 							alt=""
 						/>
 						<div>
-							<p>agenda / contacta</p>
-							<button>
-								how to rent <img src="" alt="" />
+							<p>contacta</p>
+							<button style={{marginTop:10, opacity:'50%'}}>
+								como contactar <img style={{display:'inline-block', height:'1rem'}} src={flecha} alt="" />
 							</button>
 						</div>
 					</div>
 					<div className={style.sec2_idication3}>
 						<img
-							src="https://img.freepik.com/vector-premium/imagen-dibujos-animados-hongo-palabra-hongo_587001-200.jpg?w=2000"
+							src={renta}
 							alt=""
 						/>
 						<div>
 							<p>paga</p>
-							<button>
-								how to pay <img src="" alt="" />
+							<button style={{marginTop:10, opacity:'50%'}}>
+								como pagar <img style={{display:'inline-block', height:'1rem'}} src={flecha} alt="" />
 							</button>
 						</div>
 					</div>
@@ -138,11 +144,9 @@ const Landing = () => {
 				<div className={style.sec3InfoC}>
 					<h2 className={style.sec3tll}>paseadores estrella</h2>
 					<div>
-						<p className={style.sec3stx}>
-							everything you need to when you're looking
-						</p>
+						<p className={style.sec3stx}>de entre nuestros mejores paseadores...</p>
 						<button className={style.sec3vwall}>
-							ver todos los paseadores
+							ver todos los paseadores <img style={{display:'inline-block', height:'1rem'}} src={flecha} alt="" />
 						</button>
 					</div>
 				</div>
@@ -157,6 +161,7 @@ const Landing = () => {
 					})}
 				</div>
 			</section>
+			<Footer/>
 		</div>
 	);
 };
